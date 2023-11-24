@@ -22,3 +22,5 @@ function openUrl() {
 // add event listeners to the elements
 urlInput.addEventListener("change", setUrl);
 openButton.addEventListener("click", openUrl);
+
+

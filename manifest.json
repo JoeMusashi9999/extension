@@ -3,6 +3,7 @@
   "name": "Auto Open and Accept Cookies Extension",
   "version": "1.0",
   "manifest_version": 3,
+  "minimum_chrome_version": "93",
   "description": "An extension that automatically opens a page and accepts cookies.",
   "icons": {
     "16": "icons/Icon.png",
@@ -11,7 +12,8 @@
     "128": "icons/Icon.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_popup": "popup.html"

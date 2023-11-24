@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("URL set successfully");
       }
     });
+    
   }
 
   // send a message to the background script to open the url

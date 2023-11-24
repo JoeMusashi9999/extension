@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse({ status: "OK" });
   } else if (message.type === "openUrl") {
     // open the url in a new tab
-    chrome.tabss.create({ url: url }, (tab) => {
+    chrome.tabs.create({ url: url }, (tab) => {
       // inject the content script to the tab
       chrome.scripting.executeScript({
         target: { tabId: tab.id },

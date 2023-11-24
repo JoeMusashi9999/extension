@@ -1,7 +1,6 @@
 
 // popup.js
 // get the elements from the popup
-let urlInput = document.getElementById("url-input");
 let openButton = document.getElementById("open-button");
 
 // send the url to the background script

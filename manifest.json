@@ -19,8 +19,7 @@
   "permissions": [
     "tabs",
     "cookies",
-    "storage",
-    "<all_urls>"
+    "storage"
   ],
   "host_permissions": [
     "<all_urls>"

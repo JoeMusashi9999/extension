@@ -20,7 +20,13 @@ function openUrl() {
 }
 
 // add event listeners to the elements
-urlInput.addEventListener("change", setUrl);
+window.addEventListener("DOMContentLoaded", (event) => {
+  // get the urlInput element
+  let urlInput = document.getElementById("urlInput");
+  // add event listener to the element
+  urlInput.addEventListener("change", setUrl);
+});
+
 openButton.addEventListener("click", openUrl);
 
 

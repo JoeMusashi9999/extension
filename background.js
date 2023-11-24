@@ -1,5 +1,5 @@
 // background.js
-let url = "mit.edu"; // the url of the page to open and accept cookies
+let url = urlInput; // the url of the page to open and accept cookies
 
 // listen for messages from the popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {

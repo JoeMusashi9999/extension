@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
+  function openUrl() {
+    chrome.runtime.sendMessage({ type: "openUrl" });
+  }
   urlInput.addEventListener("input", setUrl);
 
   urlInput.addEventListener("keydown", function (event) {

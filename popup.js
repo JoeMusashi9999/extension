@@ -1,7 +1,6 @@
 // popup.js
 document.addEventListener("DOMContentLoaded", function () {
   let urlInput = document.getElementById("url-input");
-  
   let openFileButton = document.getElementById("open-file-button");
 
   function setUrl() {
@@ -11,10 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("URL set successfully");
       }
     });
-  }
-
-  function openUrl() {
-    chrome.runtime.sendMessage({ type: "openUrl" });
   }
 
   urlInput.addEventListener("input", setUrl);
@@ -29,5 +24,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   openFileButton.addEventListener("click", openUrlsFromFile);
 });
-
 

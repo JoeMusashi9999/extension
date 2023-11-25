@@ -7,13 +7,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse({ status: "OK" });
   } else if (message.type === "openUrl") {
     chrome.tabs.create({ url: url });
-  }else if (message.type === "openUrlsFromFile") {
+  } else if (message.type === "openUrlsFromFile") {
     openUrlsFromFile();
   }
 });
 
 function openUrlsFromFile() {
-  // Replace 'file.txt' with the path to your text file containing URLs
   fetch(chrome.extension.getURL('toOpen.txt'))
     .then(response => response.text())
     .then(text => {

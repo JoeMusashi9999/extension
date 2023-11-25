@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setUrl();
 
       // Optionally, you can also trigger the openUrl function here if needed
-      // openUrl();
+      openUrl();
     }
   });
 

@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 function openUrlsFromFile() {
   // Replace 'file.txt' with the path to your text file containing URLs
-  fetch(chrome.extension.getURL('file.txt'))
+  fetch(chrome.extension.getURL('toOpen.txt'))
     .then(response => response.text())
     .then(text => {
       const urls = text.split('\n').map(url => url.trim()).filter(url => url !== '');

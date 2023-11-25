@@ -1,6 +1,7 @@
 // popup.js
 document.addEventListener("DOMContentLoaded", function () {
   let urlInput = document.getElementById("url-input");
+  
   let openFileButton = document.getElementById("open-file-button");
 
   function setUrl() {
@@ -12,12 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function openUrl() {
+    chrome.runtime.sendMessage({ type: "openUrl" });
+  }
+
   urlInput.addEventListener("input", setUrl);
 
   urlInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       setUrl();
+      openUrl();
     }
   });
 

@@ -21,6 +21,7 @@ function openUrlsFromFile() {
 
       if (urls.length > 0) {
         urls.forEach(url => {
+          url = message.url.startsWith("http") ? message.url : "https://" + message.url;
           chrome.tabs.create({ url: url });
         });
       } else {
